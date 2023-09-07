@@ -10,13 +10,13 @@ pipeline {
             steps {
                 // this step is required to make sure the script
                 // can be executed directly in a shell
-                sh('chmod +x ./algorithm.sh')
+                bat('chmod +x ./algorithm.bat')
             }
         }
         stage('Build') {
             steps {
                 // the algorithm script creates a file named report.txt
-                sh('./algorithm.sh')
+                bat('./algorithm.bat')
 
                 // this step archives the report
                 archiveArtifacts allowEmptyArchive: true,
