@@ -9,7 +9,7 @@ pipeline {
     stages {
         stage('First'){
             steps{
-                sh 'set +e'
+                sh 'e'
             }
         }
         stage('Requirements') {
