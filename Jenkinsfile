@@ -1,4 +1,6 @@
 pipeline {
+    environment {
+    PATH = "C:\\Program Files\\Git\\usr\\bin;C:\\Program Files\\Git\\bin;${env.PATH}"
     agent any
     options {
         buildDiscarder(logRotator(daysToKeepStr: '10', numToKeepStr: '10'))
@@ -25,5 +27,6 @@ pipeline {
                     onlyIfSuccessful: true
             }
         }
+    }
     }
 }
