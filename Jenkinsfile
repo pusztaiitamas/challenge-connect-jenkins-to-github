@@ -7,11 +7,6 @@ pipeline {
         timestamps()
     }
     stages {
-        stage('First'){
-            steps{
-                sh 'e'
-            }
-        }
         stage('Requirements') {
             steps {
                 // this step is required to make sure the script
